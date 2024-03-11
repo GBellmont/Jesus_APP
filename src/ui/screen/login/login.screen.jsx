@@ -12,8 +12,6 @@ import {
   OBJETO_INICIAL_LOGIN,
   FUNCOES_VALIDADORAS_LOGIN,
   MENSAGENS_CAMPOS_INVALIDOS_LOGIN,
-  VERSICULO_ALEATORIO_ENTRADA_ANIMATION,
-  VERSICULO_ALEATORIO_SAIDA_ANIMATION,
   LOGIN_VERSAO_CONSULTA_VERSO_ALEATORIO,
 } from "../../../core/constants";
 
@@ -100,26 +98,11 @@ const Login = () => {
   };
 
   const onToggleMostrarVersiculoMobile = () => {
-    if (dadosLogin?.versiculoAleatorioMobileVisivel) {
-      setDadosLogin({
-        ...dadosLogin,
-        versoAleatorioAnimation: VERSICULO_ALEATORIO_SAIDA_ANIMATION,
-      });
-    } else {
-      setDadosLogin({
-        ...dadosLogin,
-        versoAleatorioAnimation: VERSICULO_ALEATORIO_ENTRADA_ANIMATION,
-      });
-    }
-
-    setTimeout(() => {
-      setDadosLogin({
-        ...dadosLogin,
-        versiculoAleatorioMobileVisivel:
-          !dadosLogin?.versiculoAleatorioMobileVisivel,
-        versoAleatorioAnimation: "",
-      });
-    }, 500);
+    setDadosLogin({
+      ...dadosLogin,
+      versiculoAleatorioMobileVisivel:
+        !dadosLogin?.versiculoAleatorioMobileVisivel,
+    });
   };
 
   return (
@@ -137,7 +120,7 @@ const Login = () => {
           dadosLogin?.versiculoAleatorioMobileVisivel
             ? "login__verso-aleatorio-mobile-visivel"
             : ""
-        } ${dadosLogin?.versoAleatorioAnimation}`}
+        }`}
       >
         <h1 className="login__verso-aleatorio-livro font-genos">
           {dadosExternos?.nome}

@@ -1,0 +1,46 @@
+.submenu {
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 100%;
+  background-color: var(--white-color-app);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  position: relative;
+  box-shadow: 4px 4px 4px var(--shadow-color-app);
+}
+
+.submenu:hover {
+  cursor: pointer;
+}
+
+.submenu__descricao {
+  padding: 4px;
+  border-radius: 4px;
+  position: absolute;
+  top: 0px;
+  left: 35px;
+  background-color: var(--red-color-app-strong);
+  z-index: 3;
+  color: var(--white-color-app);
+  font-weight: bold;
+  font-size: 12px;
+  display: none;
+  box-shadow: 4px 4px 4px var(--shadow-color-app);
+}
+
+.submenu:hover .submenu__descricao {
+  display: block;
+  animation: toltip 0.5s ease;
+}
+
+@keyframes toltip {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
