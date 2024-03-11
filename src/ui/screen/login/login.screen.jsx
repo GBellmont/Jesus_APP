@@ -1,5 +1,6 @@
 import "./login.css";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useVersos, useLoader } from "../../../core/hooks";
 import { UseUsuarioGlobal } from "../../../core/context";
 import { validaCamposFormulario } from "../../../core/utils";
@@ -21,6 +22,7 @@ const Login = () => {
   const [usuarioGlobal, setUsuarioGlobal] = UseUsuarioGlobal();
   const { ativarLoader, desativarLoader } = useLoader();
   const { consultarVersoAleatorio } = useVersos();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const carregarVersoAleatorio = async () => {
@@ -73,8 +75,8 @@ const Login = () => {
     } else {
       if (usuarioGlobal[dadosLogin?.nomeUsuario]) {
         setUsuarioLogadoAtualmente(dadosLogin?.nomeUsuario);
-        //TODO - Navigate Para Home
-        console.log("Navigate Para Home!!!");
+
+        navigate("/home");
       } else {
         setUsuarioGlobal({
           ...usuarioGlobal,

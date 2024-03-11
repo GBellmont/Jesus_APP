@@ -1,9 +1,11 @@
 import versoesSubMenuImage from "../../../assets/images/versoes.png";
 import buscaPorPalavraSubMenuImage from "../../../assets/images/busca-por-palavra.png";
+import homeSubMenuImage from "../../../assets/images/home.png";
 
 const IDENTIFICADORES_SUBMENU = {
   versoes: "VERSOES",
   buscaPorPalavra: "BUSCA_POR_PALAVRA",
+  home: "HOME",
 };
 
 const PLACEHOLDERS = {};
@@ -20,6 +22,12 @@ const SUBMENUS = [
     image: buscaPorPalavraSubMenuImage,
     rota: "/busca-por-palavra",
     descricao: "busca_por_palavra",
+  },
+  {
+    identificador: IDENTIFICADORES_SUBMENU?.home,
+    image: homeSubMenuImage,
+    rota: "/home",
+    descricao: "home",
   },
 ];
 

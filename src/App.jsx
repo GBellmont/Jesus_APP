@@ -1,5 +1,5 @@
 import "./App.css";
-import { Login } from "./ui/screen";
+import { Login, Home } from "./ui/screen";
 import { Loader } from "./ui/components";
 import { Routes, Route, Navigate } from "react-router-dom";
 
@@ -10,6 +10,8 @@ const App = () => {
 
       <Routes>
         <Route path={"/login"} element={<Login />} />
+
+        <Route path={"/home"} element={<Home />} />
 
         <Route path={"*"} element={<Navigate to={"/login"} />} />
       </Routes>
