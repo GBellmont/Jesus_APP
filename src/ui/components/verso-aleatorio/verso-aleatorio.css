@@ -1,0 +1,76 @@
+.verso-aleatorio {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  max-width: 200px;
+  padding: 10px 5px;
+
+  background-color: var(--white-color-app);
+  border: 2px solid var(--black-color-app);
+  border-radius: 2px;
+  box-shadow: 6px 6px 4px var(--shadow-color-app);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.verso-aleatorio__icon {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 100%;
+  border: 2px solid var(--black-color-app);
+  box-shadow: 4px 4px 4px var(--shadow-color-app);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-color: var(--white-color-app);
+
+  position: absolute;
+  top: -60px;
+  z-index: 3;
+}
+
+.verso-aleatorio__nome {
+  width: 100%;
+  text-align: center;
+
+  font-size: 26px;
+  font-weight: bolder;
+}
+
+.verso-aleatorio__texto {
+  width: 100%;
+  height: 90px;
+  text-align: center;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  margin: 5px 0px;
+  overflow: auto;
+}
+
+.verso-aleatorio__button {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+  border-radius: 2px;
+  box-shadow: 4px 4px 4px var(--shadow-color-app);
+  background-color: var(--red-color-app-strong);
+
+  color: var(--white-color-app);
+  font-size: 18px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.verso-aleatorio__button:hover {
+  cursor: pointer;
+  transform: scale(110%);
+  transition: 400ms;
+}

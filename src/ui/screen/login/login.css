@@ -214,20 +214,12 @@
     width: 92%;
     height: 100%;
 
-    display: none;
+    transform: translateY(110%);
+    transition: 500ms;
   }
 
   .login__verso-aleatorio-mobile-visivel {
-    display: flex;
-  }
-
-  .login__verso-aleatorio-mobile-entrada {
-    display: flex;
-    animation: versoAleatorioMobileEntrada 0.5s;
-  }
-
-  .login__verso-aleatorio-mobile-saida {
-    animation: versoAleatorioMobileSaida 0.5s;
+    transform: translateY(0%);
   }
 
   .login__verso-aleatorio-livro {
