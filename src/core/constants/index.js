@@ -15,3 +15,10 @@ export {
   PLACEHOLDERS,
   SUBMENUS,
 } from "./sub-menu/sub-menu.constants.js";
+
+export {
+  URLS_IMAGENS_HOME,
+  INDEX_LIVROS_HOME,
+  NUMERO_LIVROS_HOME,
+  TESTAMENTOS_HOME,
+} from "./home/home.js";
