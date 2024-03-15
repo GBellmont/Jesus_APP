@@ -5,3 +5,4 @@ export {
 } from "./usuario-atual.utils.js";
 export { adicionarParametrosRota } from "./rota.utils.js";
 export { getImagemAleatoria } from "./imagens.utils.js";
+export { montarArrayBotoesCapitulos } from "./capitulo.utils.js";

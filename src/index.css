@@ -25,12 +25,15 @@
   box-sizing: border-box;
 
   --white-color-app: #ffffff;
+  --white-color-ice-one: #fafafa;
+  --white-color-ice-two: #f6f6f6;
   --black-color-app: #000000;
   --black-color-app-50: #00000050;
   --red-color-app: #e30606;
   --red-color-app-80: #e3060680;
   --red-color-app-strong: #ad0505;
   --shadow-color-app: rgba(0, 0, 0, 0.25);
+  --grey-color-app: #cccccc;
 }
 
 body {
@@ -48,6 +51,7 @@ body {
 */
 ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {

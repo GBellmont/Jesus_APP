@@ -1,14 +1,19 @@
-import versoesSubMenuImage from "../../../assets/images/versoes.png";
-import buscaPorPalavraSubMenuImage from "../../../assets/images/busca-por-palavra.png";
 import homeSubMenuImage from "../../../assets/images/home.png";
+import versoesSubMenuImage from "../../../assets/images/versoes.png";
+import livroSubMenuImage from "../../../assets/images/livro.png";
+import buscaPorPalavraSubMenuImage from "../../../assets/images/busca-por-palavra.png";
 
 const IDENTIFICADORES_SUBMENU = {
   versoes: "VERSOES",
   buscaPorPalavra: "BUSCA_POR_PALAVRA",
   home: "HOME",
+  livro: "LIVRO",
 };
 
-const PLACEHOLDERS = {};
+const PLACEHOLDERS = {
+  abreviacao: "{abreviacao}",
+  capitulo: "{capitulo}",
+};
 
 const SUBMENUS = [
   {
@@ -28,6 +33,12 @@ const SUBMENUS = [
     image: homeSubMenuImage,
     rota: "/home",
     descricao: "home",
+  },
+  {
+    identificador: IDENTIFICADORES_SUBMENU?.livro,
+    image: livroSubMenuImage,
+    rota: "/livro/{abreviacao}/{capitulo}",
+    descricao: "leitura",
   },
 ];
 
