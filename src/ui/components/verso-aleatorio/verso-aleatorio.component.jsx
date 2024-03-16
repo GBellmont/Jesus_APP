@@ -1,8 +1,13 @@
 import "./verso-aleatorio.css";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { SUBMENUS, IDENTIFICADORES_SUBMENU } from "../../../core/constants";
 import { useLoader, useVersos } from "../../../core/hooks";
 import { UseUsuarioGlobal } from "../../../core/context";
-import { getUsuarioLogadoAtualmente } from "../../../core/utils";
+import {
+  adicionarParametrosRota,
+  getUsuarioLogadoAtualmente,
+} from "../../../core/utils";
 import versoAleatorioIcon from "../../../assets/images/verso-aleatorio.png";
 
 const VersoAleatorio = () => {
@@ -10,6 +15,7 @@ const VersoAleatorio = () => {
   const [dadosExternos, setDadosExternos] = useState({});
   const { ativarLoader, desativarLoader } = useLoader();
   const { consultarVersoAleatorio } = useVersos();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const carregarVersoAleatorio = async () => {
@@ -23,6 +29,8 @@ const VersoAleatorio = () => {
 
         setDadosExternos({
           nome: `${response?.data?.livro?.nome} ${response?.data?.numeroCapitulo}:${response?.data?.numeroVerso}`,
+          abreviacao: response?.data?.livro?.abreviacao?.portugues,
+          numeroCapitulo: response?.data?.numeroCapitulo,
           texto: response?.data?.texto,
           textoBotao: `Ler ${response?.data?.livro?.nome} ${response?.data?.numeroCapitulo}`,
         });
@@ -37,8 +45,16 @@ const VersoAleatorio = () => {
   }, [ativarLoader, consultarVersoAleatorio, desativarLoader, usuarioGlobal]);
 
   const onDirecionarParaLeitura = () => {
-    //TODO enviar para pagina de leitura do capítulo do verso mostrado
-    console.log("Jesus Te Ama");
+    const rotaLivro = SUBMENUS?.find(
+      (submenu) => submenu?.identificador === IDENTIFICADORES_SUBMENU?.livro
+    )?.rota;
+
+    navigate(
+      adicionarParametrosRota(rotaLivro, {
+        abreviacao: dadosExternos?.abreviacao,
+        capitulo: dadosExternos?.numeroCapitulo,
+      })
+    );
   };
 
   return (

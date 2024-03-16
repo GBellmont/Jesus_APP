@@ -1,9 +1,22 @@
+import { IDENTIFICADORES_SUBMENU, SUBMENUS } from "../../../core/constants";
+import { adicionarParametrosRota } from "../../../core/utils";
 import "./home-card.css";
+import { useNavigate } from "react-router-dom";
 
-const HomeCard = ({ nome, descricao, testamento, imagem }) => {
+const HomeCard = ({ nome, descricao, testamento, imagem, abreviacao }) => {
+  const navigate = useNavigate();
+
   const direcionarParaLeitura = () => {
-    //TODO direcionar para a leitura do livro mostrado
-    console.log("Direcionar para a leitura de ", nome);
+    const rotaLivro = SUBMENUS?.find(
+      (submenu) => submenu?.identificador === IDENTIFICADORES_SUBMENU?.livro
+    )?.rota;
+
+    navigate(
+      adicionarParametrosRota(rotaLivro, {
+        abreviacao: abreviacao,
+        capitulo: 0,
+      })
+    );
   };
 
   return (

@@ -30,6 +30,7 @@ const Home = () => {
           livros: response?.data?.itens?.map((livro) => {
             return {
               nome: livro?.nome,
+              abreviacao: livro?.abreviacao?.portugues,
               descricao: `Escrito por ${livro?.autor}, contendo ${livro?.numeroCapitulos} capítulos. O livro de ${livro?.nome} pertence ao grupo: ${livro?.grupo}.`,
               testamento: TESTAMENTOS_HOME[livro?.testamento],
               imagem: getImagemAleatoria(URLS_IMAGENS_HOME),
@@ -63,6 +64,7 @@ const Home = () => {
           dadosExternos?.livros?.map((livro, index) => (
             <HomeCard
               key={index}
+              abreviacao={livro?.abreviacao}
               nome={livro?.nome}
               descricao={livro?.descricao}
               testamento={livro?.testamento}

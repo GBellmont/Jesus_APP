@@ -2,31 +2,24 @@ import { useMemo } from "react";
 import { appEnv } from "../../../environment/index.js";
 import { useHttp } from "../../base/use-http.hook.js";
 
-const useLivros = () => {
+const useCapitulos = () => {
   const httpInstance = useHttp(appEnv?.REACT_APP_JESUS_API_URL, {});
 
-  const listarLivros = async (index, numeroItens) => {
+  const consultarCapitulo = async (versao, abreviacao, capitulo) => {
     const response = httpInstance.get(
-      `/jesus-api/livros/${index}/${numeroItens}`
+      `/jesus-api/capitulos/${versao}/${abreviacao}/${capitulo}`
     );
-
-    return response;
-  };
-
-  const consultarLivroPorAbreviacao = async (abreviacao) => {
-    const response = httpInstance.get(`/jesus-api/livros/${abreviacao}`);
 
     return response;
   };
 
   return useMemo(
     () => ({
-      listarLivros,
-      consultarLivroPorAbreviacao,
+      consultarCapitulo,
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     []
   );
 };
 
-export { useLivros };
+export { useCapitulos };
