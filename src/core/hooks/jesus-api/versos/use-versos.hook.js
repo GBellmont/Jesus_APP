@@ -11,9 +11,28 @@ const useVersos = () => {
     return response;
   };
 
+  const consultarVersosPorPalavra = async (
+    versao,
+    palavra,
+    index,
+    numeroItens
+  ) => {
+    const response = httpInstance.post(
+      `/jesus-api/versos/pesquisa/${index}/${numeroItens}`,
+      {
+        versao: versao,
+        palavra: palavra,
+      },
+      {}
+    );
+
+    return response;
+  };
+
   return useMemo(
     () => ({
       consultarVersoAleatorio,
+      consultarVersosPorPalavra,
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     []

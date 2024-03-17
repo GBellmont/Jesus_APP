@@ -132,6 +132,10 @@
   letter-spacing: 1px;
 }
 
+.side-menu__last:hover {
+  cursor: not-allowed;
+}
+
 .side-menu__last:hover .side-menu__last-descricao {
   display: block;
   animation: toltip 1s ease;
