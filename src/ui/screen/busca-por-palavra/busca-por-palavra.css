@@ -1,0 +1,248 @@
+.busca-por-palavra {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: var(--red-color-app);
+
+  padding: 25px;
+}
+
+.busca-por-palavra__container {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 2px;
+  background-color: var(--white-color-app);
+  box-shadow: 8px 8px 4px var(--shadow-color-app);
+
+  padding: 25px 20px 25px 245px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.busca-por-palavra__form {
+  width: 96%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.busca-por-palavra__form-label {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  position: relative;
+}
+
+.busca-por-palavra__form-error {
+  position: absolute;
+
+  left: 0px;
+  top: -25px;
+
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--red-color-app);
+}
+
+.busca-por-palavra__form-input {
+  border: none;
+  height: 35px;
+  width: 100%;
+
+  border-left: 2px solid var(--black-color-app);
+  border-bottom: 3px solid var(--black-color-app);
+
+  padding: 0px 5px 3px 7px;
+
+  font-size: 30px;
+}
+
+.busca-por-palavra__form-button {
+  border: none;
+  border-radius: 4px;
+  background-color: var(--red-color-app);
+
+  width: 230px;
+  height: 35px;
+
+  font-size: 35px;
+  font-weight: 500;
+  color: var(--white-color-app);
+  text-align: center;
+  line-height: 30px;
+
+  margin-left: 10px;
+
+  box-shadow: 8px 8px 4px var(--shadow-color-app);
+}
+
+.busca-por-palavra__form-button:hover {
+  transform: scale(110%);
+  cursor: pointer;
+
+  transition: 400ms;
+}
+
+.busca-por-palavra__linhe-divisao {
+  border: 1px solid var(--black-color-app);
+  background-color: var(--black-color-app);
+
+  width: 91%;
+
+  margin: 20px 0px 0px;
+}
+
+.busca-por-palavra__versos-encontrados {
+  width: 100%;
+  max-height: 75%;
+  min-height: 75%;
+
+  overflow: auto;
+
+  padding: 20px 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 15px;
+}
+
+.busca-por-palavra__sem-versos {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.busca-por-palavra__paginacao {
+  display: flex;
+  width: 96%;
+
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.busca-por-palavra__pagina-anterior,
+.busca-por-palavra__pagina-sucessora {
+  border: none;
+  border-radius: 4px;
+
+  width: 230px;
+  height: 35px;
+
+  font-size: 35px;
+  font-weight: 500;
+  color: var(--white-color-app);
+  text-align: center;
+  line-height: 30px;
+
+  background-color: var(--red-color-app);
+  box-shadow: 8px 8px 4px var(--shadow-color-app);
+}
+
+.busca-por-palavra__pagina-anterior:hover,
+.busca-por-palavra__pagina-sucessora:hover {
+  transform: scale(110%);
+  cursor: pointer;
+
+  transition: 400ms;
+}
+
+.busca-por-palavra__pagina-anterior:disabled,
+.busca-por-palavra__pagina-sucessora:disabled {
+  background-color: var(--red-color-app-strong);
+  cursor: not-allowed;
+}
+
+.busca-por-palavra__numero-pagina {
+  font-size: 35px;
+  font-weight: bold;
+
+  margin: 0px 60px;
+}
+
+@media (max-width: 800px) {
+  .busca-por-palavra__form {
+    width: 96%;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .busca-por-palavra__form-label {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .busca-por-palavra__form-button {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .busca-por-palavra__versos-encontrados {
+    min-height: 70%;
+  }
+
+  .busca-por-palavra__pagina-anterior,
+  .busca-por-palavra__pagina-sucessora {
+    font-size: 20px;
+    padding: 0px 5px;
+  }
+
+  .busca-por-palavra__numero-pagina {
+    margin: 0px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .busca-por-palavra {
+    padding: 95px 15px 0px 15px;
+  }
+
+  .busca-por-palavra__container {
+    padding: 15px 0px 0px;
+  }
+
+  .busca-por-palavra__form {
+    width: 93%;
+  }
+
+  .busca-por-palavra__form-input {
+    height: 50px;
+  }
+
+  .busca-por-palavra__form-button {
+    height: 40px;
+  }
+
+  .busca-por-palavra__linhe-divisao {
+    width: 80%;
+  }
+
+  .busca-por-palavra__versos-encontrados {
+    width: 96%;
+    min-height: 63%;
+    height: 63%;
+  }
+
+  .busca-por-palavra__paginacao {
+    width: 93%;
+    justify-content: space-between;
+  }
+
+  .busca-por-palavra__pagina-anterior,
+  .busca-por-palavra__pagina-sucessora {
+    width: 120px;
+  }
+}

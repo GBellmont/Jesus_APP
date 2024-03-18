@@ -32,7 +32,7 @@ const SUBMENUS = [
     identificador: IDENTIFICADORES_SUBMENU?.home,
     image: homeSubMenuImage,
     rota: "/home",
-    descricao: "home",
+    descricao: "livros",
   },
   {
     identificador: IDENTIFICADORES_SUBMENU?.livro,

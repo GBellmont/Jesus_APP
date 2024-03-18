@@ -4,3 +4,4 @@ export { SideMenu } from "./side-menu/side-menu.compenent.jsx";
 export { VersoAleatorio } from "./verso-aleatorio/verso-aleatorio.component.jsx";
 export { HomeCard } from "./home-card/home-card.component.jsx";
 export { BotaoCapitulo } from "./botao-capitulo/botao-capitulo.component.jsx";
+export { VersoEncontrado } from "./verso-encontrado/verso-encontrado.component.jsx";
