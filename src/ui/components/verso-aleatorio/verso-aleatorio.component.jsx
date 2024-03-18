@@ -29,6 +29,7 @@ const VersoAleatorio = () => {
 
         setDadosExternos({
           nome: `${response?.data?.livro?.nome} ${response?.data?.numeroCapitulo}:${response?.data?.numeroVerso}`,
+          verso: response?.data?.numeroVerso,
           abreviacao: response?.data?.livro?.abreviacao?.portugues,
           numeroCapitulo: response?.data?.numeroCapitulo,
           texto: response?.data?.texto,
@@ -53,6 +54,7 @@ const VersoAleatorio = () => {
       adicionarParametrosRota(rotaLivro, {
         abreviacao: dadosExternos?.abreviacao,
         capitulo: dadosExternos?.numeroCapitulo,
+        versoDestaque: dadosExternos?.verso,
       })
     );
   };

@@ -22,6 +22,7 @@ const VersoEncontrado = ({
       adicionarParametrosRota(rota, {
         abreviacao: abreviacao,
         capitulo: capitulo,
+        versoDestaque: verso,
       })
     );
   };

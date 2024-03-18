@@ -15,6 +15,7 @@ const HomeCard = ({ nome, descricao, testamento, imagem, abreviacao }) => {
       adicionarParametrosRota(rotaLivro, {
         abreviacao: abreviacao,
         capitulo: 0,
+        versoDestaque: "0",
       })
     );
   };

@@ -3,7 +3,7 @@ import { SideMenu, BotaoCapitulo } from "../../components";
 import { useParams } from "react-router-dom";
 import { useLivros, useLoader, useCapitulos } from "../../../core/hooks";
 import { IDENTIFICADORES_SUBMENU } from "../../../core/constants";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useRef } from "react";
 import { UseUsuarioGlobal } from "../../../core/context";
 import {
   getUsuarioLogadoAtualmente,
@@ -11,7 +11,8 @@ import {
 } from "../../../core/utils";
 
 const Livro = () => {
-  const { abreviacao, capitulo } = useParams();
+  const referenciaVersoDestaque = useRef(null);
+  const { abreviacao, capitulo, versoDestaque } = useParams();
   const { ativarLoader, desativarLoader } = useLoader();
   const { consultarLivroPorAbreviacao } = useLivros();
   const { consultarCapitulo } = useCapitulos();
@@ -81,6 +82,11 @@ const Livro = () => {
         console.log(erro);
       } finally {
         desativarLoader();
+
+        setTimeout(
+          () => referenciaVersoDestaque?.current?.scrollIntoView(),
+          250
+        );
       }
     };
 
@@ -118,9 +124,28 @@ const Livro = () => {
         ? dadosExternos?.livro?.descricao
         : "Nenhuma Descrição Encontrada Para Este Livro...";
     } else {
-      return dadosExternos?.capitulo?.versos?.reduce((acumulador, elemento) => {
-        return acumulador + ` [${elemento?.numero}] ${elemento?.texto}`;
-      }, "");
+      const versoDestaqueVerificado = versoDestaque
+        ? parseInt(versoDestaque)
+        : null;
+      return dadosExternos?.capitulo?.versos?.map((elemento, index) => {
+        return (
+          <span
+            key={index}
+            className={`livro__detalhes-folha-principal-verso ${
+              versoDestaqueVerificado === elemento?.numero &&
+              capitulo === dadosLivro?.capituloSelecionado
+                ? "livro__detalhes-folha-principal-verso-destacado"
+                : ""
+            }`}
+            ref={
+              versoDestaqueVerificado === elemento?.numero &&
+              capitulo === dadosLivro?.capituloSelecionado
+                ? referenciaVersoDestaque
+                : null
+            }
+          >{`[${elemento?.numero}] - ${elemento?.texto}`}</span>
+        );
+      });
     }
   };
 

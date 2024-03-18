@@ -68,6 +68,23 @@
   padding: 25px;
   z-index: 3;
   font-weight: bold;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.livro__detalhes-folha-principal-verso {
+  width: 100%;
+  text-align: center;
+  padding: 15px 10px 10px;
+  font-size: 20px;
+}
+
+.livro__detalhes-folha-principal-verso-destacado {
+  color: var(--red-color-app);
+  font-weight: bolder;
 }
 
 .livro__detalhes-primeira-folha,
