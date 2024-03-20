@@ -13,7 +13,10 @@ const App = () => {
 
         <Route path={"/home"} element={<Home />} />
 
-        <Route path={"/livro/:abreviacao/:capitulo"} element={<Livro />} />
+        <Route
+          path={"/livro/:abreviacao/:capitulo/:versoDestaque"}
+          element={<Livro />}
+        />
 
         <Route path={"/busca-por-palavra"} element={<BuscaPorPalavra />} />
 

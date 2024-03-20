@@ -13,6 +13,7 @@ const IDENTIFICADORES_SUBMENU = {
 const PLACEHOLDERS = {
   abreviacao: "{abreviacao}",
   capitulo: "{capitulo}",
+  versoDestaque: "{versoDestaque}",
 };
 
 const SUBMENUS = [
@@ -37,7 +38,7 @@ const SUBMENUS = [
   {
     identificador: IDENTIFICADORES_SUBMENU?.livro,
     image: livroSubMenuImage,
-    rota: "/livro/{abreviacao}/{capitulo}",
+    rota: "/livro/{abreviacao}/{capitulo}/{versoDestaque}",
     descricao: "leitura",
   },
 ];
