@@ -1,0 +1,129 @@
+.home-card {
+  width: 190px;
+  height: 270px;
+
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  padding: 20px 10px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+  box-shadow: 6px 6px 4px var(--shadow-color-app);
+}
+
+.home-card__nome {
+  font-size: 25px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  color: var(--white-color-app);
+  z-index: 2;
+  transition: 500ms;
+
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.home-card__sobreposicao {
+  position: absolute;
+  top: 0px;
+  transform: translateY(100%);
+
+  background-color: var(--black-color-app-50);
+
+  height: 100%;
+  width: 100%;
+  padding: 60px 10px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: 500ms;
+}
+
+.home-card__sobreposicao-descricao {
+  color: var(--white-color-app);
+  font-size: 16px;
+  text-align: center;
+  line-height: 19px;
+}
+
+.home-card__sobreposicao-testamento {
+  color: var(--white-color-app);
+  font-size: 19px;
+  text-align: center;
+  line-height: 19px;
+}
+
+.home-card__sobreposicao-button {
+  border: none;
+
+  width: 50%;
+  height: 30px;
+  font-size: 20px;
+
+  color: var(--white-color-app);
+  background-color: var(--black-color-app);
+  font-weight: bold;
+
+  text-align: center;
+  transition: 500ms;
+}
+
+.home-card__sobreposicao-button:hover {
+  cursor: pointer;
+  transform: scale(110%);
+}
+
+.home-card:hover .home-card__nome {
+  transform: translateY(-650%);
+}
+
+.home-card:hover .home-card__sobreposicao {
+  transform: translateY(0%);
+}
+
+@media (max-width: 460px) {
+  .home-card {
+    width: 100%;
+    height: 150px;
+
+    align-items: center;
+  }
+
+  .home-card__nome {
+    font-size: 45px;
+  }
+
+  .home-card:hover .home-card__nome {
+    font-size: 30px;
+    transform: translateY(-150%);
+  }
+
+  .home-card__sobreposicao {
+    padding: 35px 10px 10px;
+  }
+
+  .home-card__sobreposicao-descricao {
+    font-size: 13px;
+  }
+
+  .home-card__sobreposicao-testamento {
+    margin: 5px 0px;
+    font-size: 14px;
+  }
+
+  .home-card__sobreposicao-button {
+    width: 30%;
+  }
+}

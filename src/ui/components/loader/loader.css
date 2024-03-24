@@ -1,0 +1,180 @@
+.loader {
+  position: fixed;
+  z-index: 10;
+  background-color: var(--red-color-app-80);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader__ativo {
+  display: flex;
+}
+
+.loader__ex {
+  font-family: "Lato";
+  color: var(--white-color-app);
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 1.5px;
+  text-align: center;
+  width: 90px;
+  margin-top: 20px;
+  animation: fade 3s infinite;
+  font-family: "flamenco";
+  font-size: 4em;
+  width: 60px;
+  height: 60px;
+  margin-top: -60px;
+  display: inline-block;
+  border: 4px double var(--white-color-app);
+}
+
+.loader__ex:nth-child(1) {
+  animation: spin1 3s infinite 1s;
+  transform-origin: 50% 52%;
+  margin-left: -45px;
+}
+
+.loader__ex:nth-child(2) {
+  animation: spin2 3s infinite 1s;
+  transform-origin: 50% 52%;
+  margin-left: 35px;
+  margin-bottom: 40px;
+}
+
+.loader__ex:nth-child(3) {
+  animation: spin2 3s infinite 1s;
+  transform-origin: 50% 52%;
+  margin-left: -45px;
+}
+
+.loader__ex:nth-child(4) {
+  margin-left: -1px;
+  animation: spin1 3s infinite 1s;
+  transform-origin: 50% 52%;
+  margin-left: 35px;
+}
+
+.loader__descricao {
+  font-family: "Lato";
+  color: var(--white-color-app);
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 1.5px;
+  text-align: center;
+  width: 235px;
+  margin-top: 20px;
+  animation: fade 3s infinite;
+}
+
+@-webkit-keyframes spin1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spin1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes spin1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+@-moz-keyframes spin2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+@-o-keyframes spin2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes fade {
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade {
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fade {
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}

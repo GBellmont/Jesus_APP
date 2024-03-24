@@ -1,0 +1,52 @@
+.verso-encontrado {
+  border: none;
+  border-radius: 2px;
+
+  width: 96%;
+
+  background-color: var(--red-color-app);
+  box-shadow: 8px 8px 4px var(--shadow-color-app);
+
+  position: relative;
+}
+
+.verso-encontrado:hover {
+  transform: scale(102%);
+  cursor: pointer;
+
+  transition: 400ms;
+}
+
+.verso-encontrado__livro {
+  position: absolute;
+  top: 0px;
+  left: 5px;
+
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  color: var(--white-color-app);
+}
+
+.verso-encontrado__texto {
+  padding: 20px 10px 15px;
+  height: 100%;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--white-color-app);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.verso-encontrado__destaque {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0px 3px;
+  color: var(--black-color-app);
+}

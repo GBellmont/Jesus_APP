@@ -1,0 +1,134 @@
+.versoes-card {
+  width: 320px;
+  height: 180px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  position: relative;
+
+  padding: 10px;
+  box-shadow: 8px 8px 4px var(--shadow-color-app);
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.versoes-card__selecionada {
+  background-color: var(--red-color-app);
+  border-radius: 4px;
+  box-shadow: 8px 8px 4px var(--shadow-color-app);
+  width: 60%;
+  height: 35px;
+
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--white-color-app);
+
+  position: absolute;
+  top: 10px;
+  z-index: 2;
+}
+
+.versoes-card__nome {
+  width: 100%;
+  text-align: center;
+
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 50px;
+
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--white-color-app);
+  z-index: 2;
+}
+
+.versoes-card__detalhes {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+  background-color: var(--black-color-app-50);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 10px;
+
+  padding: 10px;
+  z-index: 1;
+
+  transform: translateY(100%);
+}
+
+.versoes-card__codigo {
+  font-size: 20px;
+  font-weight: 700px;
+  color: var(--white-color-app);
+
+  margin-top: 35px;
+}
+
+.versoes-cards__ver-detalhes {
+  border: none;
+
+  width: 40%;
+  height: 40px;
+
+  font-size: 20px;
+  color: var(--white-color-app);
+  font-weight: 600;
+  background-color: var(--black-color-app);
+}
+
+.versoes-cards__ver-detalhes:hover {
+  cursor: pointer;
+}
+
+.versoes-card:hover .versoes-card__selecionada {
+  transition: 500ms;
+
+  width: 30px;
+  overflow: hidden;
+  padding: 0px 5px 0px 7px;
+  letter-spacing: 20px;
+
+  transform: translateX(-455%) translateY(360%);
+}
+
+.versoes-card:hover .versoes-card__nome {
+  transform: translateY(-250%);
+  transition: 500ms;
+}
+
+.versoes-card:hover .versoes-card__detalhes {
+  transform: translateY(0%);
+  transition: 500ms;
+}
+
+@media (max-width: 380px) {
+  .versoes-card__selecionada {
+    font-size: 20px;
+    height: 28px;
+  }
+
+  .versoes-card:hover .versoes-card__selecionada {
+    transform: translateX(-315%) translateY(475%);
+  }
+
+  .versoes-cards__ver-detalhes {
+    font-size: 16px;
+    height: 30px;
+  }
+}
