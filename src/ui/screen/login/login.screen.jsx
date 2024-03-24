@@ -44,7 +44,6 @@ const Login = () => {
       }
     };
 
-    console.log(dadosExternos?.nome);
     if (!dadosExternos?.nome) {
       carregarVersoAleatorio();
     }

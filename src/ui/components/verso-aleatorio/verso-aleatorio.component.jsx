@@ -1,14 +1,14 @@
 import "./verso-aleatorio.css";
-import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { SUBMENUS, IDENTIFICADORES_SUBMENU } from "../../../core/constants";
-import { useLoader, useVersos } from "../../../core/hooks";
+import { useNavigate } from "react-router-dom";
 import { UseUsuarioGlobal } from "../../../core/context";
+import { useLoader, useVersos } from "../../../core/hooks";
+import { SUBMENUS, IDENTIFICADORES_SUBMENU } from "../../../core/constants";
+import versoAleatorioIcon from "../../../assets/images/verso-aleatorio.png";
 import {
   adicionarParametrosRota,
   getUsuarioLogadoAtualmente,
 } from "../../../core/utils";
-import versoAleatorioIcon from "../../../assets/images/verso-aleatorio.png";
 
 const VersoAleatorio = () => {
   const [usuarioGlobal] = UseUsuarioGlobal();

@@ -1,4 +1,5 @@
 import "./home.css";
+import { useEffect, useState } from "react";
 import { SideMenu, HomeCard } from "../../components";
 import { getImagemAleatoria } from "../../../core/utils";
 import { useLoader, useLivros } from "../../../core/hooks";
@@ -9,7 +10,6 @@ import {
   NUMERO_LIVROS_HOME,
   TESTAMENTOS_HOME,
 } from "../../../core/constants";
-import { useEffect, useState } from "react";
 
 const Home = () => {
   const { ativarLoader, desativarLoader } = useLoader();
