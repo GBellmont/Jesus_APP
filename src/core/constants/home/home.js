@@ -1,3 +1,12 @@
+const INDEX_LIVROS_HOME = 0;
+
+const NUMERO_LIVROS_HOME = 66;
+
+const TESTAMENTOS_HOME = {
+  VT: "Velho Testamento",
+  NT: "Novo Testamento",
+};
+
 const URLS_IMAGENS_HOME = [
   "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://images.unsplash.com/photo-1533000971552-6a962ff0b9f9?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -19,18 +28,9 @@ const URLS_IMAGENS_HOME = [
   "https://images.unsplash.com/photo-1624884252467-9e57b4b0f751?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
 
-const INDEX_LIVROS_HOME = 0;
-
-const NUMERO_LIVROS_HOME = 66;
-
-const TESTAMENTOS_HOME = {
-  VT: "Velho Testamento",
-  NT: "Novo Testamento",
-};
-
 export {
-  URLS_IMAGENS_HOME,
   INDEX_LIVROS_HOME,
   NUMERO_LIVROS_HOME,
   TESTAMENTOS_HOME,
+  URLS_IMAGENS_HOME,
 };

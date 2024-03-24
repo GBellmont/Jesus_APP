@@ -1,9 +1,12 @@
 import "./side-menu.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { SUBMENUS } from "../../../core/constants";
 import { SubMenu } from "../sub-menu/sub-menu.component.jsx";
-import { VersoAleatorio } from "../verso-aleatorio/verso-aleatorio.component.jsx";
+import logOutImageSideMenu from "../../../assets/images/log-out.png";
 import jesusImageSideMenuHeader from "../../../assets/images/jesus-login.png";
+import { VersoAleatorio } from "../verso-aleatorio/verso-aleatorio.component.jsx";
+import { setUsuarioLogadoAtualmente } from "../../../core/utils/usuario-atual.utils.js";
 
 const SideMenu = ({ parametros, submenus, identificadorSubmenuAtual }) => {
   const getSubMenu = (identificador) => {
@@ -16,7 +19,13 @@ const SideMenu = ({ parametros, submenus, identificadorSubmenuAtual }) => {
     sideMenuResponsivoMobileVisivel: false,
   };
 
+  const navigate = useNavigate();
   const [dadosSideMenu, setDadosSideMenu] = useState(OBJETO_INICIAL_SIDEMENU);
+
+  const onLogOut = () => {
+    setUsuarioLogadoAtualmente(undefined);
+    navigate("/login");
+  };
 
   const onAparecerSideMenuResponsivo = () => {
     setDadosSideMenu({
@@ -90,6 +99,16 @@ const SideMenu = ({ parametros, submenus, identificadorSubmenuAtual }) => {
                 />
               ))
             : null}
+
+          <button
+            className="submenu"
+            style={{
+              backgroundImage: "url(" + logOutImageSideMenu + ")",
+            }}
+            onClick={onLogOut}
+          >
+            <div className="submenu__descricao font-genos">LOG_OUT</div>
+          </button>
 
           <div className="side-menu__last">
             <div className="side-menu__last-descricao font-genos">

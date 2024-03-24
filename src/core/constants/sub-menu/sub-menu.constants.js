@@ -1,7 +1,7 @@
-import homeSubMenuImage from "../../../assets/images/home.png";
-import versoesSubMenuImage from "../../../assets/images/versoes.png";
-import livroSubMenuImage from "../../../assets/images/livro.png";
 import buscaPorPalavraSubMenuImage from "../../../assets/images/busca-por-palavra.png";
+import homeSubMenuImage from "../../../assets/images/home.png";
+import livroSubMenuImage from "../../../assets/images/livro.png";
+import versoesSubMenuImage from "../../../assets/images/versoes.png";
 
 const IDENTIFICADORES_SUBMENU = {
   versoes: "VERSOES",
@@ -43,4 +43,4 @@ const SUBMENUS = [
   },
 ];
 
-export { SUBMENUS, IDENTIFICADORES_SUBMENU, PLACEHOLDERS };
+export { IDENTIFICADORES_SUBMENU, PLACEHOLDERS, SUBMENUS };

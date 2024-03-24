@@ -2,29 +2,19 @@ import "./busca-por-palavra.css";
 import { useState } from "react";
 import { UseUsuarioGlobal } from "../../../core/context";
 import { useVersos, useLoader } from "../../../core/hooks";
+import { SideMenu, VersoEncontrado } from "../../components";
+import { IDENTIFICADORES_SUBMENU } from "../../../core/constants";
 import {
   validaCamposFormulario,
   getUsuarioLogadoAtualmente,
 } from "../../../core/utils";
-import { SideMenu, VersoEncontrado } from "../../components";
-import { IDENTIFICADORES_SUBMENU } from "../../../core/constants";
-
-const FUNCOES_VALIDADORAS_BUSCA_POR_PALAVRA = {
-  palavra: (string) => string.length >= 4,
-};
-
-const MENSAGENS_CAMPOS_INVALIDOS_BUSCA_POR_PALAVRA = {
-  palavra: "Palavra de busca inválido(a) ou não informado(a).",
-};
-
-const OBJETO_INICIAL_BUSCA_POR_PALAVRA = {
-  palavra: "",
-  erros: {},
-  versiculoAleatorioMobileVisivel: false,
-};
-
-const INDEX_INICIAL_BUSCA_POR_PALAVRA = 0;
-const NUMERO_ITENS_POR_BUSCA = 20;
+import {
+  FUNCOES_VALIDADORAS_BUSCA_POR_PALAVRA,
+  INDEX_INICIAL_BUSCA_POR_PALAVRA,
+  MENSAGENS_CAMPOS_INVALIDOS_BUSCA_POR_PALAVRA,
+  NUMERO_ITENS_POR_BUSCA,
+  OBJETO_INICIAL_BUSCA_POR_PALAVRA,
+} from "../../../core/constants";
 
 const BuscaPorPalavra = () => {
   const { consultarVersosPorPalavra } = useVersos();
@@ -104,7 +94,7 @@ const BuscaPorPalavra = () => {
         index: response?.data?.index,
         primeiraPagina: response?.data?.primeiraPagina,
         ultimaPagina: response?.data?.ultimaPagina,
-        palavraDestaque: dadosBuscaPorPalavra?.palavra,
+        palavraDestaque: palavra,
         versosEncontrados: response?.data?.itens?.map((item) => {
           return {
             texto: item?.texto,

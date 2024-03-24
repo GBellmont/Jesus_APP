@@ -1,10 +1,10 @@
 import "./livro.css";
-import { SideMenu, BotaoCapitulo } from "../../components";
 import { useParams } from "react-router-dom";
-import { useLivros, useLoader, useCapitulos } from "../../../core/hooks";
-import { IDENTIFICADORES_SUBMENU } from "../../../core/constants";
-import { useCallback, useEffect, useState, useRef } from "react";
 import { UseUsuarioGlobal } from "../../../core/context";
+import { SideMenu, BotaoCapitulo } from "../../components";
+import { useCallback, useEffect, useState, useRef } from "react";
+import { IDENTIFICADORES_SUBMENU } from "../../../core/constants";
+import { useLivros, useLoader, useCapitulos } from "../../../core/hooks";
 import {
   getUsuarioLogadoAtualmente,
   montarArrayBotoesCapitulos,

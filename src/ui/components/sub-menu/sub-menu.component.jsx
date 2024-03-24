@@ -1,6 +1,6 @@
-import { adicionarParametrosRota } from "../../../core/utils";
 import "./sub-menu.css";
 import { useNavigate } from "react-router-dom";
+import { adicionarParametrosRota } from "../../../core/utils";
 
 const SubMenu = ({ image, descricao, rota, parametros }) => {
   const navigate = useNavigate();

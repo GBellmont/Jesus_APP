@@ -1,7 +1,7 @@
-import { IDENTIFICADORES_SUBMENU, SUBMENUS } from "../../../core/constants";
-import { adicionarParametrosRota } from "../../../core/utils";
 import "./home-card.css";
 import { useNavigate } from "react-router-dom";
+import { adicionarParametrosRota } from "../../../core/utils";
+import { IDENTIFICADORES_SUBMENU, SUBMENUS } from "../../../core/constants";
 
 const HomeCard = ({ nome, descricao, testamento, imagem, abreviacao }) => {
   const navigate = useNavigate();
